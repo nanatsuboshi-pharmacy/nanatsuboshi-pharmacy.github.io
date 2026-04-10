@@ -78,6 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000);
   }
 
+  // --- ヒーロースライダー ---
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  if (heroSlides.length > 1) {
+    let heroCurrent = 0;
+    setInterval(() => {
+      heroSlides[heroCurrent].classList.remove('active');
+      heroCurrent = (heroCurrent + 1) % heroSlides.length;
+      heroSlides[heroCurrent].classList.add('active');
+    }, 5500);
+  }
+
   // --- ヘッダースクロール ---
   const header = document.getElementById('header');
   const backToTop = document.getElementById('backToTop');
