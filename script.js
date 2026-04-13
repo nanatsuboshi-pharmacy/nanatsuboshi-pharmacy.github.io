@@ -184,6 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(p);
       p.addEventListener('animationend', () => p.remove());
     }
+    // アニメーションを一時停止して opacity/transform を確実に適用
+    const savedAnimation = star.style.animation;
+    star.style.animation = 'none';
     star.style.opacity = '0';
     star.style.transform = 'scale(0)';
     star.style.transition = 'opacity 0.15s, transform 0.15s';
@@ -191,6 +194,10 @@ document.addEventListener('DOMContentLoaded', () => {
       star.style.transition = 'opacity 0.5s, transform 0.5s';
       star.style.opacity = '';
       star.style.transform = '';
+      setTimeout(() => {
+        star.style.transition = '';
+        star.style.animation = savedAnimation || '';
+      }, 500);
     }, 600);
   }
 
