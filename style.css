@@ -224,22 +224,16 @@ img { max-width: 100%; height: auto; display: block; }
 
 .hero-slide {
   position: absolute;
-  inset: 0;
+  inset: -10px;
   background-size: cover;
   background-position: center;
   opacity: 0;
   transition: opacity 2s ease-in-out;
-  animation: slowZoom 12s ease-in-out infinite alternate;
   will-change: opacity;
 }
 
 .hero-slide.active {
   opacity: 0.32;
-}
-
-@keyframes slowZoom {
-  0%   { transform: scale(1.05); }
-  100% { transform: scale(1.12); }
 }
 
 .hero-overlay {
@@ -1577,7 +1571,14 @@ img { max-width: 100%; height: auto; display: block; }
   .hero-scroll { display: none; }
   .global-stars { display: none; }
   .section-stars { display: none; }
-  .hero-star { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+  .hero-star { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 24px !important; }
+  .hero-star:nth-child(1) { top: 8%; left: -2% !important; right: auto !important; }
+  .hero-star:nth-child(2) { top: 18%; right: -2% !important; left: auto !important; }
+  .hero-star:nth-child(3) { top: 38%; left: -3% !important; right: auto !important; }
+  .hero-star:nth-child(4) { bottom: 30%; right: -2% !important; left: auto !important; }
+  .hero-star:nth-child(5) { top: 55%; left: -1% !important; right: auto !important; }
+  .hero-star:nth-child(6) { bottom: 18%; right: -3% !important; left: auto !important; }
+  .hero-star:nth-child(7) { bottom: 10%; left: -2% !important; right: auto !important; }
   .hero-circle-1 { width: 300px; height: 300px; }
   .hero-circle-2 { width: 250px; height: 250px; }
   .hero-circle-3 { display: none; }
