@@ -78,14 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000);
   }
 
-  // --- ヒーロースライダー ---
+  // --- ヒーロースライダー（クロスフェード） ---
   const heroSlides = document.querySelectorAll('.hero-slide');
   if (heroSlides.length > 1) {
     let heroCurrent = 0;
     setInterval(() => {
-      heroSlides[heroCurrent].classList.remove('active');
-      heroCurrent = (heroCurrent + 1) % heroSlides.length;
-      heroSlides[heroCurrent].classList.add('active');
+      const next = (heroCurrent + 1) % heroSlides.length;
+      heroSlides[next].classList.add('active');
+      setTimeout(() => {
+        heroSlides[heroCurrent].classList.remove('active');
+        heroCurrent = next;
+      }, 2000);
     }, 5500);
   }
 
