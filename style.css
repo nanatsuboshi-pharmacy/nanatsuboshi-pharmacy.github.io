@@ -395,13 +395,13 @@ img { max-width: 100%; height: auto; display: block; }
   pointer-events: none;
 }
 
-.hero-star:nth-child(1) { top: 10%; left: 2%; font-size: 38px; opacity: 1; animation-delay: 0s; }
-.hero-star:nth-child(2) { top: 15%; right: 2%; font-size: 32px; opacity: 1; animation-delay: 1s; }
-.hero-star:nth-child(3) { top: 40%; left: 1%; font-size: 28px; opacity: 1; animation-delay: 2s; }
-.hero-star:nth-child(4) { bottom: 25%; right: 1%; font-size: 42px; opacity: 1; animation-delay: 0.5s; }
-.hero-star:nth-child(5) { top: 65%; left: 3%; font-size: 26px; opacity: 1; animation-delay: 3s; }
-.hero-star:nth-child(6) { bottom: 35%; right: 3%; font-size: 34px; opacity: 1; animation-delay: 1.5s; }
-.hero-star:nth-child(7) { bottom: 12%; left: 2%; font-size: 30px; opacity: 1; animation-delay: 2.5s; }
+.hero-star:nth-child(1) { top: 8%;  left: 1%;  font-size: 34px; opacity: 1; animation-delay: 0s; }
+.hero-star:nth-child(2) { top: 30%; left: 0%;  font-size: 28px; opacity: 1; animation-delay: 1s; }
+.hero-star:nth-child(3) { top: 55%; left: 1%;  font-size: 26px; opacity: 1; animation-delay: 2s; }
+.hero-star:nth-child(4) { bottom: 8%; left: 0%; font-size: 30px; opacity: 1; animation-delay: 0.5s; }
+.hero-star:nth-child(5) { top: 8%;  right: 1%; font-size: 32px; opacity: 1; animation-delay: 3s; }
+.hero-star:nth-child(6) { top: 35%; right: 0%; font-size: 26px; opacity: 1; animation-delay: 1.5s; }
+.hero-star:nth-child(7) { bottom: 8%; right: 1%; font-size: 28px; opacity: 1; animation-delay: 2.5s; }
 
 @keyframes floatStar {
   0%, 100% { transform: translateY(0) rotate(0deg); }
