@@ -430,14 +430,155 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* 非表示（旧デザイン要素） */
-.hero-constellation,
-.hero-circle,
-.star-hint,
-.hero-star,
-.hero-seven-stars,
-.global-stars,
+/* 星エフェクト要素 — 表示ON */
+
+/* ヒント文 */
+.star-hint {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  z-index: 5;
+  pointer-events: none;
+  animation: starHintFade 3s ease-in-out infinite;
+}
+@keyframes starHintFade {
+  0%,100% { opacity: 0.4; }
+  50%      { opacity: 0.8; }
+}
+
+/* 浮遊するヒーロー星 */
+.hero-star {
+  position: absolute;
+  color: #fff;
+  font-size: 18px;
+  z-index: 5;
+  opacity: 0;
+  animation: heroStarFloat var(--dur, 8s) var(--delay, 0s) ease-in-out infinite;
+  text-shadow: 0 0 8px rgba(255,255,255,0.8), 0 0 20px rgba(100,200,255,0.5);
+}
+.hero-star:nth-child(1) { top: 15%; left: 8%;  --dur:7s;  --delay:-1s; font-size:22px; }
+.hero-star:nth-child(2) { top: 25%; left: 82%; --dur:9s;  --delay:-3s; font-size:14px; }
+.hero-star:nth-child(3) { top: 60%; left: 5%;  --dur:6s;  --delay:-5s; font-size:18px; }
+.hero-star:nth-child(4) { top: 70%; left: 88%; --dur:8s;  --delay:-2s; font-size:24px; }
+.hero-star:nth-child(5) { top: 40%; left: 90%; --dur:10s; --delay:-7s; font-size:16px; }
+.hero-star:nth-child(6) { top: 80%; left: 12%; --dur:7s;  --delay:-4s; font-size:12px; }
+.hero-star:nth-child(7) { top: 10%; left: 50%; --dur:11s; --delay:-6s; font-size:20px; }
+@keyframes heroStarFloat {
+  0%,100% { opacity: 0.1; transform: translateY(0) scale(1); }
+  50%      { opacity: 0.7; transform: translateY(-12px) scale(1.2); }
+}
+
+/* 北斗七星コンステレーション */
+.hero-constellation {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+.constellation-star {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px 2px rgba(160,210,255,0.8);
+  animation: constellationPulse 3s ease-in-out infinite;
+}
+.constellation-star:nth-child(1) { top: 22%; left: 20%; animation-delay: 0s; }
+.constellation-star:nth-child(2) { top: 18%; left: 28%; animation-delay: 0.3s; }
+.constellation-star:nth-child(3) { top: 15%; left: 36%; animation-delay: 0.6s; }
+.constellation-star:nth-child(4) { top: 20%; left: 44%; animation-delay: 0.9s; }
+.constellation-star:nth-child(5) { top: 30%; left: 50%; animation-delay: 1.2s; }
+.constellation-star:nth-child(6) { top: 24%; left: 57%; animation-delay: 1.5s; }
+.constellation-star:nth-child(7) { top: 16%; left: 63%; animation-delay: 1.8s; }
+@keyframes constellationPulse {
+  0%,100% { opacity: 0.4; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.6); }
+}
+.constellation-line {
+  position: absolute;
+  height: 1px;
+  background: rgba(160,210,255,0.4);
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+/* ページ全体の背景星 */
+.global-stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.global-star {
+  position: absolute;
+  color: var(--primary-light);
+  animation: globalStarTwinkle var(--dur,8s) var(--delay,0s) ease-in-out infinite;
+  opacity: 0;
+  pointer-events: auto;
+  cursor: pointer;
+}
+@keyframes globalStarTwinkle {
+  0%,100% { opacity: var(--min-op, 0.05); }
+  50%      { opacity: var(--max-op, 0.18); }
+}
+
+/* セクション両サイドの星 */
 .section-stars {
-  display: none !important;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.section-stars span {
+  position: absolute;
+  color: var(--primary-light);
+  animation: globalStarTwinkle var(--dur,8s) var(--delay,0s) ease-in-out infinite;
+  opacity: 0;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* ヒーロー七つ星 */
+.hero-seven-stars {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.hero-seven-stars span {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  animation: heroStarFloat 6s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.3s);
+  text-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+.hero-seven-stars span:nth-child(1) { animation-delay: 0s; }
+.hero-seven-stars span:nth-child(2) { animation-delay: 0.3s; }
+.hero-seven-stars span:nth-child(3) { animation-delay: 0.6s; }
+.hero-seven-stars span:nth-child(4) { animation-delay: 0.9s; }
+.hero-seven-stars span:nth-child(5) { animation-delay: 1.2s; }
+.hero-seven-stars span:nth-child(6) { animation-delay: 1.5s; }
+.hero-seven-stars span:nth-child(7) { animation-delay: 1.8s; }
+
+/* 星バーストパーティクル */
+.star-burst-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: starBurstAnim 0.8s ease-out forwards;
+  color: var(--primary-light);
+  text-shadow: 0 0 6px rgba(100,200,255,0.8);
+}
+@keyframes starBurstAnim {
+  0%   { opacity: 1; transform: translate(0,0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--bx,40px), var(--by,-40px)) scale(0.3); }
 }
 
 /* ============================================
