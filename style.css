@@ -456,10 +456,13 @@ a { text-decoration: none; color: inherit; }
   position: absolute;
   color: #fff;
   font-size: 18px;
-  z-index: 5;
+  z-index: 10;
   opacity: 0;
   animation: heroStarFloat var(--dur, 8s) var(--delay, 0s) ease-in-out infinite;
   text-shadow: 0 0 8px rgba(255,255,255,0.8), 0 0 20px rgba(100,200,255,0.5);
+  pointer-events: auto;
+  cursor: pointer;
+  padding: 8px;
 }
 .hero-star:nth-child(1) { top: 15%; left: 8%;  --dur:7s;  --delay:-1s; font-size:22px; }
 .hero-star:nth-child(2) { top: 25%; left: 82%; --dur:9s;  --delay:-3s; font-size:14px; }
@@ -488,6 +491,8 @@ a { text-decoration: none; color: inherit; }
   background: #fff;
   box-shadow: 0 0 4px 2px rgba(160,210,255,0.7);
   animation: constellationPulse 3s ease-in-out infinite;
+  pointer-events: auto;
+  cursor: pointer;
 }
 /* 北斗七星 — 右上配置（北斗七星の実際の形を再現） */
 .constellation-star:nth-child(1) { top: 12%; left: 68%; animation-delay: 0s; }

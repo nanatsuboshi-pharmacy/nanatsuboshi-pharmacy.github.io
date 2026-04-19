@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- ヒーロー星のバーストエフェクト ---
   document.querySelectorAll('.hero-star').forEach(addBurst);
+  document.querySelectorAll('.constellation-star').forEach(addBurst);
 
   // --- セクション両サイドの星デコレーション ---
   const decorSections = document.querySelectorAll('.services, .info, .faq, .access, .contact');
