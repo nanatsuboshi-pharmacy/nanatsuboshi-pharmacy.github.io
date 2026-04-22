@@ -454,26 +454,23 @@ a { text-decoration: none; color: inherit; }
 /* 浮遊するヒーロー星 */
 .hero-star {
   position: absolute;
-  color: #fff;
-  font-size: 18px;
-  z-index: 10;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  z-index: 2;
   opacity: 0;
   animation: heroStarFloat var(--dur, 8s) var(--delay, 0s) ease-in-out infinite;
-  text-shadow: 0 0 8px rgba(255,255,255,0.8), 0 0 20px rgba(100,200,255,0.5);
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
   pointer-events: auto;
   cursor: pointer;
   padding: 8px;
 }
-.hero-star:nth-child(1) { top: 15%; left: 8%;  --dur:7s;  --delay:-1s; font-size:22px; }
-.hero-star:nth-child(2) { top: 25%; left: 82%; --dur:9s;  --delay:-3s; font-size:14px; }
-.hero-star:nth-child(3) { top: 60%; left: 5%;  --dur:6s;  --delay:-5s; font-size:18px; }
-.hero-star:nth-child(4) { top: 70%; left: 88%; --dur:8s;  --delay:-2s; font-size:24px; }
-.hero-star:nth-child(5) { top: 40%; left: 90%; --dur:10s; --delay:-7s; font-size:16px; }
-.hero-star:nth-child(6) { top: 80%; left: 12%; --dur:7s;  --delay:-4s; font-size:12px; }
-.hero-star:nth-child(7) { top: 10%; left: 50%; --dur:11s; --delay:-6s; font-size:20px; }
+.hero-star:nth-child(1) { top: 12%; left: 6%;  --dur:8s;  --delay:-1s; font-size:14px; }
+.hero-star:nth-child(2) { top: 20%; left: 88%; --dur:10s; --delay:-3s; font-size:12px; }
+.hero-star:nth-child(3) { top: 75%; left: 4%;  --dur:7s;  --delay:-5s; font-size:12px; }
+.hero-star:nth-child(4) { top: 80%; left: 90%; --dur:9s;  --delay:-2s; font-size:14px; }
 @keyframes heroStarFloat {
-  0%,100% { opacity: 0.1; transform: translateY(0) scale(1); }
-  50%      { opacity: 0.7; transform: translateY(-12px) scale(1.2); }
+  0%,100% { opacity: 0.05; transform: translateY(0) scale(1); }
+  50%      { opacity: 0.4; transform: translateY(-8px) scale(1.05); }
 }
 
 /* 北斗七星コンステレーション */
@@ -1486,8 +1483,7 @@ a.contact-tel:hover { color: var(--accent); }
   .constellation-star:nth-child(6) { top: 21%; left: 78%; }
   .constellation-star:nth-child(7) { top: 25%; left: 83%; }
 
-  /* 浮遊星をスマホで中央エリア回避 */
-  .hero-star:nth-child(2) { left: 78%; }
-  .hero-star:nth-child(4) { left: 82%; }
-  .hero-star:nth-child(5) { left: 85%; }
+  /* 浮遊星をスマホで端に寄せる */
+  .hero-star:nth-child(2) { left: 85%; }
+  .hero-star:nth-child(4) { left: 88%; }
 }
