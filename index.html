@@ -20,12 +20,18 @@
       padding: 20px;
       text-align: center;
     }
+    /* リダイレクトが効かなかった場合のみ3秒後に案内を表示する */
     .box {
       max-width: 480px;
       background: #fff;
       padding: 40px 30px;
       border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      opacity: 0;
+      animation: showFallback 0.4s ease 3s forwards;
+    }
+    @keyframes showFallback {
+      to { opacity: 1; }
     }
     h1 {
       font-size: 20px;
@@ -59,9 +65,7 @@
     <a href="https://nanatsuboshi-hayashimachi.pages.dev/">新しいページを開く</a>
   </div>
   <script>
-    setTimeout(function(){
-      window.location.replace("https://nanatsuboshi-hayashimachi.pages.dev/");
-    }, 100);
+    window.location.replace("https://nanatsuboshi-hayashimachi.pages.dev/");
   </script>
 </body>
 </html>
