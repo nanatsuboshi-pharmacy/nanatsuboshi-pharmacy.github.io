@@ -16,7 +16,7 @@
   <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
   {
@@ -47,32 +47,35 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <img src="images/logo.png" alt="ななつ星調剤薬局" class="header-logo">
-      <span class="header-title">ななつ星調剤薬局</span>
+      <a href="#" class="header-brand">
+        <img src="images/logo.png" alt="ななつ星調剤薬局" class="header-logo">
+        <span class="header-title">ななつ星調剤薬局</span>
+      </a>
+      <nav class="header-nav" aria-label="サイト内メニュー">
+        <a href="#stores">店舗のご案内</a>
+        <a href="#promise">私たちのお約束</a>
+      </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-stars" aria-hidden="true">
-      <span class="hero-star s1">★</span>
-      <span class="hero-star s2">★</span>
-      <span class="hero-star s3">★</span>
-      <span class="hero-star s4">★</span>
-      <span class="hero-star s5">★</span>
-      <span class="hero-star s6">★</span>
-      <span class="hero-star s7">★</span>
-    </div>
-    <div class="hero-content">
-      <img src="images/logo.png" alt="ななつ星調剤薬局のロゴ" class="hero-logo">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">香川県高松市の調剤薬局</p>
       <h1 class="hero-title">ななつ星調剤薬局</h1>
-      <p class="hero-copy">香川県高松市で、地域のみなさまの健康を<br>4つの店舗でサポートしています</p>
-      <a href="#stores" class="hero-cta">店舗をさがす</a>
+      <div class="hero-stars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <p class="hero-copy">地域のみなさまの健康を、高松市内の4つの店舗でサポートしています。</p>
+      <a href="#stores" class="hero-cta">店舗のご案内を見る</a>
     </div>
   </section>
 
   <main>
     <section id="stores" class="stores-section">
-      <h2 class="section-title"><span class="title-star" aria-hidden="true">★</span>店舗のご案内</h2>
+      <div class="section-head">
+        <p class="section-en">STORES</p>
+        <h2 class="section-title">店舗のご案内</h2>
+      </div>
       <p class="section-lead">お近くの店舗をお選びください。各店舗の詳しい営業時間・地図は店舗ページでご覧いただけます。</p>
 
       <div class="store-grid">
@@ -84,7 +87,7 @@
             <div><dt>電話</dt><dd><a href="tel:0878025072">087-802-5072</a></dd></div>
             <div><dt>営業</dt><dd>月〜金 9:00〜18:00<br>土 9:00〜13:00／日祝休</dd></div>
           </dl>
-          <a class="store-link" href="https://nanatsuboshi-hayashimachi.pages.dev/">林店のホームページを見る</a>
+          <a class="store-link" href="https://nanatsuboshi-hayashimachi.pages.dev/">林店のページを見る</a>
         </article>
 
         <article class="store-card">
@@ -94,7 +97,7 @@
             <div><dt>電話</dt><dd><a href="tel:0878690120">087-869-0120</a></dd></div>
             <div><dt>営業</dt><dd>月火木金 9:00〜18:00<br>水・土 9:00〜13:00／日祝休</dd></div>
           </dl>
-          <a class="store-link" href="https://nanatsuboshi-matsunawa.pages.dev/">松縄店のホームページを見る</a>
+          <a class="store-link" href="https://nanatsuboshi-matsunawa.pages.dev/">松縄店のページを見る</a>
         </article>
 
         <article class="store-card">
@@ -104,7 +107,7 @@
             <div><dt>電話</dt><dd><a href="tel:0878026833">087-802-6833</a></dd></div>
             <div><dt>営業</dt><dd>月〜水・金 9:00〜18:00<br>木・土 9:00〜13:00／日祝休</dd></div>
           </dl>
-          <a class="store-link" href="https://nanatsuboshi-higashiyamasaki.pages.dev/">東山崎店のホームページを見る</a>
+          <a class="store-link" href="https://nanatsuboshi-higashiyamasaki.pages.dev/">東山崎店のページを見る</a>
         </article>
 
         <article class="store-card">
@@ -114,26 +117,42 @@
             <div><dt>電話</dt><dd><a href="tel:0878024455">087-802-4455</a></dd></div>
             <div><dt>営業</dt><dd>月火水金 9:00〜18:00<br>木・土 9:00〜13:00／日祝休</dd></div>
           </dl>
-          <a class="store-link" href="https://nanatsuboshi-miyawaki.pages.dev/">宮脇店のホームページを見る</a>
+          <a class="store-link" href="https://nanatsuboshi-miyawaki.pages.dev/">宮脇店のページを見る</a>
         </article>
 
       </div>
     </section>
 
-    <section class="features-section">
-      <h2 class="section-title"><span class="title-star" aria-hidden="true">★</span>ななつ星調剤薬局のお約束</h2>
-      <ul class="feature-list">
-        <li>全国すべての医療機関の処方箋を受付いたします</li>
-        <li>後発医薬品（ジェネリック）の調剤を積極的に行っています</li>
-        <li>マイナンバーカードを利用した資格確認に対応しています</li>
-        <li>お薬や健康に関するご相談をいつでも承ります</li>
-      </ul>
+    <section id="promise" class="promise-section">
+      <div class="section-head">
+        <p class="section-en">OUR PROMISE</p>
+        <h2 class="section-title">ななつ星調剤薬局のお約束</h2>
+      </div>
+      <div class="promise-grid">
+        <div class="promise-item">
+          <p class="promise-num">01</p>
+          <p class="promise-text">全国すべての医療機関の処方箋を受付いたします</p>
+        </div>
+        <div class="promise-item">
+          <p class="promise-num">02</p>
+          <p class="promise-text">後発医薬品（ジェネリック）の調剤を積極的に行っています</p>
+        </div>
+        <div class="promise-item">
+          <p class="promise-num">03</p>
+          <p class="promise-text">マイナンバーカードを利用した資格確認に対応しています</p>
+        </div>
+        <div class="promise-item">
+          <p class="promise-num">04</p>
+          <p class="promise-text">お薬や健康に関するご相談をいつでも承ります</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <img src="images/logo.png" alt="" class="footer-logo">
-    <p>© <span id="year">2026</span> ななつ星調剤薬局</p>
+    <p class="footer-name">ななつ星調剤薬局</p>
+    <p class="footer-copy">© <span id="year">2026</span> ななつ星調剤薬局</p>
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
