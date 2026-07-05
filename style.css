@@ -78,6 +78,16 @@ a { color: var(--green); }
   padding: 88px 24px 96px;
 }
 .hero-inner { max-width: 720px; margin: 0 auto; }
+.hero-logo {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 16px rgba(44, 80, 60, 0.1);
+  margin-bottom: 22px;
+}
 .hero-eyebrow {
   color: var(--gold);
   font-size: 0.85rem;
