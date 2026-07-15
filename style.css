@@ -175,18 +175,17 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
   transition: box-shadow 0.25s ease;
 }
 .store-card:hover { box-shadow: 0 6px 24px rgba(44, 80, 60, 0.1); }
-.store-name {
-  font-family: "Noto Serif JP", serif;
-  font-weight: 600;
-  color: var(--green-dark);
-  font-size: 1.2rem;
-  letter-spacing: 0.08em;
+.store-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 10px;
   padding-bottom: 12px;
   margin-bottom: 18px;
   border-bottom: 1px solid var(--line);
   position: relative;
 }
-.store-name::after {
+.store-head::after {
   content: "";
   position: absolute;
   left: 0;
@@ -195,6 +194,35 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
   height: 1px;
   background: var(--gold);
 }
+.store-name {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;
+  color: var(--green-dark);
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  flex: none;
+}
+.store-depts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px 5px;
+}
+.dept {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--green-pale);
+  color: var(--green-dark);
+  border-radius: 999px;
+  padding: 3px 10px 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.dept svg { width: 14px; height: 14px; flex: none; }
 .store-info { flex: 1; font-size: 0.9rem; }
 .store-info > div {
   display: flex;
