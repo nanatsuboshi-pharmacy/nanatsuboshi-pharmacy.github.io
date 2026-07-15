@@ -105,12 +105,12 @@ a { color: var(--green); }
 .hero-stars {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 18px;
   margin: 26px 0;
 }
 .hero-stars span {
-  width: 8px;
-  height: 8px;
+  width: 13px;
+  height: 13px;
   background: var(--gold);
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   opacity: 0.85;
