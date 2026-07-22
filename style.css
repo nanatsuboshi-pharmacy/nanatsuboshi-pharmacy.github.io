@@ -8,6 +8,8 @@
   --line: #e3e7e2;
   --bg: #faf9f6;
   --white: #ffffff;
+  --logo-blue: #6ba4cc;
+  --logo-orange: #dd6b3f;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -72,7 +74,10 @@ a { color: var(--green); }
 
 /* ヒーロー */
 .hero {
-  background: linear-gradient(180deg, #f3f6f1 0%, var(--bg) 100%);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(107, 164, 204, 0.14), transparent 42%),
+    radial-gradient(circle at 84% 82%, rgba(221, 107, 63, 0.10), transparent 46%),
+    linear-gradient(180deg, #f3f6f1 0%, var(--bg) 100%);
   border-bottom: 1px solid var(--line);
   text-align: center;
   padding: 88px 24px 96px;
@@ -111,9 +116,9 @@ a { color: var(--green); }
 .hero-stars span {
   width: 13px;
   height: 13px;
-  background: var(--gold);
+  background: #f2c14e;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 .hero-copy {
   color: var(--sub);
